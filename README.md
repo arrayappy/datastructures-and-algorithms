@@ -5,9 +5,3 @@
 ##### LinkedIn Profile : [https://www.linkedin.com/in/arrayappy/](https://www.linkedin.com/in/arrayappy/)
 
 ## Data Structures
-#
-
-### Array
-
-|  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
-|-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
