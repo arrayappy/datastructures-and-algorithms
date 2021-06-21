@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-struct Node {
+class Stack{
+    public:
+    struct Node {
     int data;
     Node *next; 
     Node(int data){
@@ -8,6 +10,7 @@ struct Node {
         next=NULL;
     }
 };
+
 struct Node* head = NULL;
 
 void push(int data)
@@ -32,7 +35,7 @@ void pop()
     }
     else
     {
-        cout<<head->data<<endl;
+        //cout<<head->data<<endl;
         head=head->next;
     }
 }
@@ -55,18 +58,16 @@ void peek()
 {
     cout<<head->data<<endl;
 }
+};
 
 int main()
 {
-    push(1);
-    push(2);
-    push(3);
-    push(4);
-    traverse();
-    pop();
-    pop();
-    traverse();
-    push(5);
-    traverse();
-    peek();
+    Stack s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    s.pop();
+    s.push(40);
+    s.traverse();
+    s.peek();
 }
