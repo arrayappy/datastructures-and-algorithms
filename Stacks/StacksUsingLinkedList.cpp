@@ -2,6 +2,8 @@
 using namespace std;
 class Stack{
     public:
+    int length;
+    Stack() { length = 0; }
     struct Node {
     int data;
     Node *next; 
@@ -25,18 +27,20 @@ void push(int data)
         temp->next=head;
         head=temp;
     }
+    length++;
 }
 
 void pop()
 {
     if(head==NULL)
     {
-        cout<<"Stack is emptttty"<<endl;
+        cout<<"Stack is empty"<<endl;
     }
     else
     {
         //cout<<head->data<<endl;
         head=head->next;
+        length--;
     }
 }
 
@@ -58,6 +62,11 @@ void peek()
 {
     cout<<head->data<<endl;
 }
+
+void size()
+{
+    cout<<length<<endl;
+}
 };
 
 int main()
@@ -70,4 +79,5 @@ int main()
     s.push(40);
     s.traverse();
     s.peek();
+    s.size();
 }
