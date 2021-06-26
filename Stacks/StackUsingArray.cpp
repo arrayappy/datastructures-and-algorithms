@@ -6,7 +6,7 @@ class Stack
 {
     public:
         int top;
-        int a[MAX];
+        int arr[MAX];
 
     Stack()
     {
@@ -23,7 +23,7 @@ class Stack
         else
         {
             top++;
-            a[top]=data;
+            arr[top]=data;
             return true;
         }
     }
@@ -37,7 +37,7 @@ class Stack
         }
         else
         {
-            int temp=a[top--];
+            int temp=arr[top--];
             return temp;
         }
     }
@@ -51,7 +51,7 @@ class Stack
         }
         else
         {
-            return a[top];
+            return arr[top];
         }
     }
 
