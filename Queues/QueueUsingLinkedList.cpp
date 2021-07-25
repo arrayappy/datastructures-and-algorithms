@@ -4,7 +4,6 @@ class Queue
 {
 public:
     int length;
-    Queue() { length = 0; }
     struct Node
     {
         int data;
@@ -16,8 +15,15 @@ public:
         }
     };
 
-    struct Node* front = NULL;
-    struct Node* rear = NULL;
+    struct Node* front;
+    struct Node* rear;
+    
+    Queue() 
+    { 
+        length = 0; 
+        front = NULL;
+        rear = NULL;
+    }
 
     bool isEmpty()
     {
