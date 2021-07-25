@@ -7,18 +7,18 @@ int binarySearch(int arr[], int left, int right, int target)
 {
     while(left<=right)
     {   
-        int middle=(left+right)/2;
-        if(arr[middle]==target)
+        int mid=(left+right)/2;
+        if(arr[mid]==target)
         {
-            return middle;
+            return mid;
         }
-        if(arr[middle]<target)
+        if(arr[mid]<target)
         {
-            return binarySearch(arr, middle+1, right, target);
+            return binarySearch(arr, mid+1, right, target);
         }
-        if(arr[middle]>target)
+        if(arr[mid]>target)
         {
-            return binarySearch(arr, left, middle-1, target);
+            return binarySearch(arr, left, mid-1, target);
         }
     }
     return -1; 
