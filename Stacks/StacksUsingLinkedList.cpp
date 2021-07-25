@@ -3,70 +3,76 @@ using namespace std;
 class Stack{
     public:
     int length;
-    Stack() { length = 0; }
-    struct Node {
-    int data;
-    Node *next; 
-    Node(int data){
-        this->data=data;
-        next=NULL;
-    }
-};
-
-struct Node* head = NULL;
-
-void push(int data)
-{   
-    struct Node* temp = new Node(data);
-    if(head==NULL)
+    struct Node 
     {
-        head=temp;
-    }
-    else
-    {
-        temp->next=head;
-        head=temp;
-    }
-    length++;
-}
+        int data;
+        Node *next; 
+        Node(int data)
+        {
+            this->data=data;
+            next=NULL;
+        }
+    };
 
-void pop()
-{
-    if(head==NULL)
-    {
-        cout<<"Stack is empty"<<endl;
-    }
-    else
-    {
-        //cout<<head->data<<endl;
-        head=head->next;
-        length--;
-    }
-}
+    struct Node* head;
 
-void traverse()
-{   
-    if(head==NULL)
+    Stack() 
     {
-        cout<<"Stack is empty"<<endl;
+        length = 0;
+        head = NULL;
     }
-    struct Node* temp = head;
-    while(temp!=NULL)
+    void push(int data)
+    {   
+        struct Node* temp = new Node(data);
+        if(head==NULL)
+        {
+            head=temp;
+        }
+        else
+        {
+            temp->next=head;
+            head=temp;
+        }
+        length++;
+    }
+
+    void pop()
     {
-        cout<<(temp->data)<<endl;
-        temp=temp->next;
+        if(head==NULL)
+        {
+            cout<<"Stack is empty"<<endl;
+        }
+        else
+        {
+            //cout<<head->data<<endl;
+            head=head->next;
+            length--;
+        }
     }
-}
 
-void peek()
-{
-    cout<<head->data<<endl;
-}
+    void traverse()
+    {   
+        if(head==NULL)
+        {
+            cout<<"Stack is empty"<<endl;
+        }
+        struct Node* temp = head;
+        while(temp!=NULL)
+        {
+            cout<<(temp->data)<<endl;
+            temp=temp->next;
+        }
+    }
 
-void size()
-{
-    cout<<length<<endl;
-}
+    void peek()
+    {
+        cout<<head->data<<endl;
+    }
+
+    void size()
+    {
+        cout<<length<<endl;
+    }
 };
 
 int main()
